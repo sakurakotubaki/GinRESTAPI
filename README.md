@@ -98,3 +98,27 @@ curl http://localhost:8080/todos -X POST -H "Content-Type: application/json" -d 
 ```bash
 curl http://localhost:8080/todos -X GET
 ```
+
+10. curlでPUTリクエストを送信する
+```bash
+curl http://localhost:8080/todos/{id} -X PUT -H "Content-Type: application/json" -d '{"text": "updated text"}'
+```
+
+11. curlでDELETEリクエストを送信する
+```bash
+curl http://localhost:8080/todos/{id} -X DELETE
+```
+
+
+## render.comにPOSTとGETをする
+renderが起動している状態で以下のcurlコマンドを実行する
+
+HTTP POST
+```bash
+curl https://ginapi-zai5.onrender.com/todos -X POST -H "Content-Type: application/json" -d '{"id": 1, "text": "Kurokawa"}'
+```
+
+HTTP GET
+```bash
+curl https://ginapi-zai5.onrender.com/todos -X GET
+```
